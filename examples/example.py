@@ -1,7 +1,12 @@
-from griptape.structures import Agent
+import logging
 from rick_and_morty_tool import RickMortyTool
+from griptape.structures import Agent
+from griptape.utils import Chat
+from dotenv import load_dotenv
 
 
-agent = Agent(tools=[RickMortyTool()])
+load_dotenv()
 
-agent.run("Use the ReverseStringTool to reverse 'Griptape'")
+agent = Agent(tools=[RickMortyTool(off_prompt=False)], logger_level=logging.ERROR)
+
+Chat(agent).start()
