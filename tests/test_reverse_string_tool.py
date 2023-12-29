@@ -1,5 +1,5 @@
 from griptape.artifacts import TextArtifact
-from reverse_string_tool import ReverseStringTool
+from rick_and_morty_tool import ReverseStringTool
 
 
 class TestReverseStringTool:

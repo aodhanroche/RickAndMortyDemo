@@ -1,7 +1,7 @@
 from griptape.structures import Agent
-from reverse_string_tool import ReverseStringTool
+from rick_and_morty_tool import RickMortyTool
 
 
-agent = Agent(tools=[ReverseStringTool()])
+agent = Agent(tools=[RickMortyTool()])
 
 agent.run("Use the ReverseStringTool to reverse 'Griptape'")
